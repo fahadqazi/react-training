@@ -17,6 +17,8 @@ var helpers = {
             return info.map(function(user){
                 return user.data
             })
+        }).catch(function(err){
+            console.warm("Error is getPlayersInfo", err)
         })
         
     }
