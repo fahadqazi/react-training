@@ -8,7 +8,7 @@ function getUserInfo(username){
     return axios.get('http://api.github.com/users/' + username)
 }
 function getRepos(username){
-    return axios.get('http://api.github.com/users/' + username + '/repos' + '&per_page=100'); 
+    return axios.get('http://api.github.com/users/' + username + '/repos'); 
 }
 
 function getTotalStars(repos){
@@ -22,7 +22,7 @@ function getPlayersData (player){
         .then(getTotalStars)
         .then(function(totalStars){
             return{
-                followers: players.followers,
+                followers: player.followers,
                 totalStars: totalStars
             }
         })
