@@ -3,7 +3,6 @@ var PropTypes = React.PropTypes;
 var transparentBg = require('../styles').transparentBg;
 
 Prompt.propTypes = {
-
         header: PropTypes.string.isRequired,
         username: PropTypes.string.isRequired,
         onSubmitUser: PropTypes.func.isRequired,
